@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Bredele-shop
+{% endblock title %}
+
+{% block main %}
+	<section class="mt-10">
+		<h2 class="text-4xl text-red-500">Notre entreprise</h2>
+		<p class="fs-6">
+			L'entreprise, fictive, Bredele a pour but de diffuser la culture gastronimique alsacienne via les gâteaux de Noël appelés les bredele. Les bredele sont des petits biscuits préparés tarditonnellement en Alsace pour les fêtes de Noël. Les recettes de bredele sont transmisses de générations en générations. Voici quelques recettes que vous pourrez cuisiner chez vous.
+		</p>
+	</section>
+
+	<section class="mt-10">
+		<h2 class="text-4xl text-red-500">Nos produits populaires</h2>
+
+		<div
+			class="">
+			{# for produit in product #}
+			<div class="">
+				<h3 class="">{# produit.getName #}</h3>
+				<p>
+					Prix =
+					{# produit.getProductPrice #}
+					€
+				</p>
+				<img src="{# asset( produit.getProductProfilPicture ) #}" alt="{# produit.getName #}">
+				<button type="button" class="">Ajouter au panier</button>
+			</div>
+			{# endfor #}
+		</div>
+	</section>
+
+	<section class="mt-10">
+		<h2 class="text-4xl text-red-500">Sur notre blog</h2>
+		<div
+			class="">
+			{# for article in blog #}
+			<div class="">
+				<h3 class="">{# article.getArticleName #}</h3>
+				<img src="{# asset( article.getArticleProfilPicture ) #}" alt="{# article.getArticleName #}">
+				<button type="button" class="">Lire l'article</button>
+			</div>
+			{# endfor #}
+		</div>
+		<!--Sélection de livres-->
+	<!--Mes codes promos-->
+		<!--Recettes en vidéos-->
+		<!--Outil pratique-->
+	</section>
+
+	<section class="mt-10">
+		<h2 class="text-4xl text-red-500">Bredele c'est</h2>
+		<div class="">
+			<div class="flex flex-col justify-center items-center">
+				<h3 class="text-center">Satisfait ou remboursé</h3>
+				<p class="text-center">14 jours pour changer d'avis et être remboursé</p>
+				<img src="{{ asset('/pictures/website_icon/logo_opinion.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+			</div>
+			<div class="flex flex-col justify-center items-center">
+				<h3 class="text-center">Service express</h3>
+				<p class="text-center">livraison en 24 heures</p>
+				<img src="{{ asset('/pictures/website_icon/logo_truck.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+			</div>
+			<div class="flex flex-col justify-center items-center">
+				<h3 class="text-center">Livraison gratuite</h3>
+				<p class="text-center">dès 50 euros</p>
+				<img src="{{ asset('/pictures/website_icon/logo_free.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+			</div>
+			<div class="flex flex-col justify-center items-center">
+				<h3 class="text-center">Paiement sécurisé</h3>
+				<p class="text-center">Données bancaires cryptées</p>
+				<img src="{{ asset('/pictures/website_icon/logo_locker.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+			</div>
+		</div>
+	</section>
+{% endblock main %}
