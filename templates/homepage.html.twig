@@ -4,15 +4,31 @@
 	Bredele-shop
 {% endblock title %}
 
+{% block additional_javascripts %}
+    <script defer src="{{ asset('/javascript/homepage_slider.js') }}"></script>
+{% endblock %}
+
 {% block main %}
-	<section class="mt-10">
+
+	<section class="mt-10 w-full">
+        <div class="relative w-full h-full">
+            <img src="{{ asset('/pictures/website_slider/slider1.jpg') }}" alt="" class="slider_picture w-full">
+            <img src="{{ asset('/pictures/website_slider/slider2.jpg') }}" alt="" class="slider_picture w-full hidden">
+            <img src="{{ asset('/pictures/website_slider/slider3.jpg') }}" alt="" class="slider_picture w-full hidden">
+            <img src="{{ asset('/pictures/website_slider/slider4.jpg') }}" alt="" class="slider_picture w-full hidden">
+            <img id="slider_arrow_left" src="{{ asset('/pictures/website_icon/logo_slider_arrow.svg') }}" alt="" class="absolute left-4 top-1/2 -translate-y-1/2 rotate-180">
+            <img id="slider_arrow_right" src="{{ asset('/pictures/website_icon/logo_slider_arrow.svg') }}" alt="" class="absolute right-4 top-1/2 -translate-y-1/2">
+        </div>
+    </section>
+
+	<section class="mt-10 ms-8">
 		<h2 class="text-4xl text-red-500">Notre entreprise</h2>
 		<p class="fs-6">
 			L'entreprise, fictive, Bredele a pour but de diffuser la culture gastronimique alsacienne via les gâteaux de Noël appelés les bredele. Les bredele sont des petits biscuits préparés tarditonnellement en Alsace pour les fêtes de Noël. Les recettes de bredele sont transmisses de générations en générations. Voici quelques recettes que vous pourrez cuisiner chez vous.
 		</p>
 	</section>
 
-	<section class="mt-10">
+	<section class="mt-10 ms-8">
 		<h2 class="text-4xl text-red-500">Nos produits populaires</h2>
 
 		<div
@@ -32,7 +48,7 @@
 		</div>
 	</section>
 
-	<section class="mt-10">
+	<section class="mt-10 ms-8">
 		<h2 class="text-4xl text-red-500">Sur notre blog</h2>
 		<div
 			class="">
@@ -45,15 +61,15 @@
 			{# endfor #}
 		</div>
 		<!--Sélection de livres-->
-	<!--Mes codes promos-->
+	    <!--Mes codes promos-->
 		<!--Recettes en vidéos-->
 		<!--Outil pratique-->
 	</section>
 
-	<section class="mt-10">
+	<section class="mt-10 ms-8">
 		<h2 class="text-4xl text-red-500">Bredele c'est</h2>
-		<div class="">
-			<div class="flex flex-col justify-center items-center">
+		<div class="flex justify-around items-center flex-wrap">
+			<div class="lg:flex lg:flex-col lg:justify-center lg:items-center">
 				<h3 class="text-center">Satisfait ou remboursé</h3>
 				<p class="text-center">14 jours pour changer d'avis et être remboursé</p>
 				<img src="{{ asset('/pictures/website_icon/logo_opinion.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
