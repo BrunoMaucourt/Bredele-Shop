@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Ajouter un produit
+{% endblock title %}
+
+{% block main %}
+
+    <h1 class="text-3xl w-full flex justify-center mt-10">Ajouter un produit</h1>
+
+	<section class="my-10 px-10 w-full flex flex-wrap justify-around">
+        {{ form_start(productForm, {
+                'attr': {
+                    'class' : 'm-10 py-4 w-full md:w-1/2 bg-white border border-red-500 flex flex-col justify-center items-center'
+                }
+            })
+        }}
+
+            <fieldset class="flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
+                <legend class="w-full flex justify-center">Informations du produit</legend>
+                {{ form_row(productForm.name, {
+                    label: 'Nom du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.category, {
+                    label: 'Categorie du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.description, {
+                    label: 'Dscription du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.add_profil_picture, {
+                    label: 'Photo de profil du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.add_picture, {
+                    label: 'Photo du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.price, {
+                    label: 'Prix du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.stock, {
+                    label: 'Stock du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+                {{ form_row(productForm.discount, {
+                    label: 'Réduction du produit',
+                        attr: {
+                            'class': 'border rounded-lg md:ms-6'
+                        }
+                    })
+                }}
+            </fieldset>
+
+            <button type="submit" class="mt-10 bg-red-500 text-white text-xl rounded-lg p-2">
+                Ajouter un produit
+            </button>
+
+        {{ form_end(productForm) }}
+    </section>
+
+{% endblock main %}

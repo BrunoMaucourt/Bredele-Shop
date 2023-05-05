@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Admin
+{% endblock title %}
+
+{% block main %}
+
+    <h1 class="text-3xl w-full flex justify-center mt-10">Page d'administration</h1>
+
+	<section class="my-10 px-10 w-full flex flex-wrap justify-around">
+        <a href="{{ path('admin_add_product') }}" class="bg-slate-200 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl">Ajouter un produit</h2>
+            <img src="#" alt="">
+        </a>
+        <a href="#" class="bg-slate-200 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl">Ajouter un article</h2>
+            <img src="#" alt="">
+        </a>
+        <a href="#" class="bg-slate-200 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl">Ajouter une recette</h2>
+            <img src="#" alt="">
+        </a>
+        <a href="{{ path('admin_add_product_category') }}" class="bg-slate-200 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl">Ajouter une catégorie</h2>
+            <img src="#" alt="">
+        </a>
+        <a href="#" class="bg-slate-200 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl text-center">Modifier droits d'un utilisateur</h2>
+            <img src="#" alt="">
+        </a>
+        <a href="{{ path('app_logout') }}" class="bg-red-500 rounded-lg w-64 h-64 flex justify-center items-center">
+            <h2 class="text-xl text-center">Modifier droits d'un utilisateur</h2>
+            <img src="#" alt="">
+        </a>
+    </section>
+
+{% endblock main %}
