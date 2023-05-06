@@ -11,7 +11,15 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function index(): Response
     {
+
+        $articles = [];
+        $products = [];
+        $recipes = [];
+
         return $this->render('homepage.html.twig', [
+            'articles' => $articles,
+            'products' => $products,
+            'recipes' => $recipes,
         ]);
     }
 }

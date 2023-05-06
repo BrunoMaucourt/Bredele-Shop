@@ -1,89 +1,90 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription
+{% endblock %}
 
 {% block main %}
 
-    <div class="w-full flex justify-center items-center">
+	<div class="w-full flex justify-center items-center">
 
-            {{ form_start(registrationForm, {
+		{{ form_start(registrationForm, {
                 'attr': {
-                    'class' : 'm-10 py-4 w-full md:w-1/2 bg-white border border-red-500 flex flex-col justify-center items-center'
+                    'class' : 'm-10 py-4 w-full md:w-1/2 bg-white border border-main-red flex flex-col justify-center items-center'
                 }
             }) }}
-                        
-                <h1 class="text-3xl font-bold mb-6">Inscription</h1>
 
-                <fieldset class="w-full flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
-                    <legend class="w-full flex justify-center">Mon compte</legend>
-                    {{ form_row(registrationForm.email, {
+		<h1 class="text-3xl font-bold mb-6">Inscription</h1>
+
+		<fieldset class="w-full flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
+			<legend class="w-full flex justify-center">Mon compte</legend>
+			{{ form_row(registrationForm.email, {
                         label: 'Mon adresse email',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.plainPassword, {
+			{{ form_row(registrationForm.plainPassword, {
                         label: 'Mon mot de passe',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                </fieldset>
+		</fieldset>
 
-                <fieldset class="w-full flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
-                    <legend class="w-full flex justify-center">Mes informations</legend>
-                    {{ form_row(registrationForm.last_name, {
+		<fieldset class="w-full flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
+			<legend class="w-full flex justify-center">Mes informations</legend>
+			{{ form_row(registrationForm.last_name, {
                         label: 'Mon nom de famille',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.first_name, {
+			{{ form_row(registrationForm.first_name, {
                         label: 'Mon prénom',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.address, {
+			{{ form_row(registrationForm.address, {
                         label: 'Mon addresse',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.city, {
+			{{ form_row(registrationForm.city, {
                         label: 'Ma ville',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.zip_code, {
+			{{ form_row(registrationForm.zip_code, {
                         label: 'Mon code postal',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                    {{ form_row(registrationForm.country, {
+			{{ form_row(registrationForm.country, {
                         label: 'Mon pays',
                         attr: {
                             'class': 'border rounded-lg md:ms-6'
                         }
                     }) }}
-                </fieldset>
+		</fieldset>
 
-                <fieldset class="flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
-                    <legend class="w-full flex justify-center">Mes informations personnelles</legend>
-                    {{ form_row(registrationForm.agreeTerms, {
+		<fieldset class="flex flex-col gap-2 mt-2 justify-center items-center [&>*]:flex [&>*]:flex-col md:[&>*]:flex-row [&>*]:justify-center [&>*]:items-center">
+			<legend class="w-full flex justify-center">Mes informations personnelles</legend>
+			{{ form_row(registrationForm.agreeTerms, {
                         label: 'J\'accepte que mes données soient traitées'
                     }) }}
                 </fieldset>
 
-                <button type="submit" class="mt-10 bg-red-500 text-white text-xl rounded-lg p-2">
+                <button type="submit" class="mt-10 bg-main-green text-white text-xl rounded-lg p-2">
                     S'inscrire
                 </button>
                 <a href="{{ path('app_login') }}" class="mt-10 bg-slate-200 text-white text-xl rounded-lg p-2">
                     Se connecter
                 </a>
             {{ form_end(registrationForm) }}
-    </div>
+		</div>
 
-{% endblock %}
+	{% endblock %}

@@ -1,47 +1,45 @@
-<div id="header_space" class="h-[150px] relative bg-green-200">
-    <header class="w-full h-[150px] absolute top-0 left-0 z-20 grid grid-cols-4 grid-rows-2 lg:grid-cols-3 bg-white" id="header">
- 
-        <a href=" {{ path('app_homepage') }}" class="w-full mt-2 col-span-2 row-start-1 lg:col-start-1 lg:col-span-1 flex justify-center items-center">
-            <img src="{{ asset('pictures/website_icon/LogoHeader.svg') }}" alt="Logo Bredele" class="w-[50px] h-[50px]">
-            <h2 class="text-lg md:text-xl lg:text-3xl lg:font-bold">
-                Bredele-Shop
-            </h2>
-        </a>
+<div id="header_space" class="h-[150px] relative">
+	<header class="w-full h-[150px] absolute top-0 left-0 z-20 grid grid-cols-4 grid-rows-2 lg:grid-cols-3 bg-white border-b-main-red border-b-2 drop-shadow-xl" id="header">
 
-        <div class="col-span-2 row-start-1 lg:col-start-3 lg:col-end-4 w-full h-full mt-2 flex justify-center items-center">
-            <a href=" {{ path('app_login') }}" class="flex flex-col justify-center items-center h-full w-1/3">
-                <img src="{{ asset('pictures/website_icon/logo_profil.svg') }}" alt="Mon compte" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
-                <p class="hidden sm:block sm:text-lg lg:text-lg lg:font-bold">Mon compte</p>
-            </a>
-            <a href="#" class="flex flex-col justify-center items-center h-full w-1/3">
-                <img src="{{ asset('pictures/website_icon/logo_cart.svg') }}" alt="Mon panier" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
-                <p class="hidden sm:block sm:text-lg lg:text-lg lg:font-bold">Mon panier</p>
-            </a>
-            <a href="#" class="flex flex-col justify-center items-center h-full w-1/3 lg:hidden">
-                <img src="{{ asset('pictures/website_icon/logo_burger.svg') }}" alt="Menu" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
-                <p class="hidden sm:block sm:text-lg">Menu</p>
-            </a>
-            {% if is_granted("ROLE_ADMIN") %}
-                <a href="{{ path('admin_page') }}" class="flex flex-col justify-center items-center h-full w-1/3">
-                    <img src="{{ asset('pictures/website_icon/logo_burger.svg') }}" alt="Menu" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
-                    <p class="hidden sm:block sm:text-lg">Admin</p>
-                </a>           
-            {% endif %}
-        </div>
+		<a href=" {{ path('app_homepage') }}" class="w-full mt-2 col-span-2 row-start-1 lg:col-start-1 lg:col-span-1 flex justify-center items-center">
+			<img src="{{ asset('pictures/website_icon/LogoHeader.svg') }}" alt="Logo Bredele" class="w-[50px] h-[50px]">
+			<h2 class="ms-2 text-lg text-main-gold md:text-xl lg:text-3xl lg:font-bold">
+				Bredele-Shop
+			</h2>
+		</a>
 
-        <div class="w-full col-span-4 row-start-2 lg:col-start-2 lg:col-end-3 lg:row-start-1 flex justify-center items-center p-3 border-b-red-500 lg:border-0 border-b-8">
-            <div class="border rounded-lg w-full h-full lg:h-3/4 mx-4">
-                Rechercher
-            </div>
-        </div>
+		<div class="col-span-2 row-start-1 lg:col-start-3 lg:col-end-4 w-full h-full mt-2 flex justify-center items-center">
+			<a href=" {{ path('app_login') }}" class="flex flex-col justify-center items-center h-full w-1/3">
+				<img src="{{ asset('pictures/website_icon/logo_profil.svg') }}" alt="Mon compte" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
+				<p class="hidden sm:block sm:text-lg lg:text-lg lg:font-bold">Mon compte</p>
+			</a>
+			<a href="#" class="flex flex-col justify-center items-center h-full w-1/3">
+				<img src="{{ asset('pictures/website_icon/logo_cart.svg') }}" alt="Mon panier" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
+				<p class="hidden sm:block sm:text-lg lg:text-lg lg:font-bold">Mon panier</p>
+			</a>
+			<a href="#" class="flex flex-col justify-center items-center h-full w-1/3 lg:hidden">
+				<img src="{{ asset('pictures/website_icon/logo_burger.svg') }}" alt="Menu" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
+				<p class="hidden sm:block sm:text-lg">Menu</p>
+			</a>
+			{% if is_granted("ROLE_ADMIN") %}
+				<a href="{{ path('admin_page') }}" class="flex flex-col justify-center items-center h-full w-1/3">
+					<img src="{{ asset('pictures/website_icon/logo_admin.svg') }}" alt="Menu" class="w-[35px] lg:w-[50px] h-[35px] lg:h-[50px]">
+					<p class="hidden sm:block sm:text-lg">Admin</p>
+				</a>
+			{% endif %}
+		</div>
 
-        <div class="hidden col-span-3 row-start-2 w-full mt-6 lg:flex lg:h-[50px] lg:justify-around bg-red-500 drop-shadow-xl">
-            <p>Recettes</p>
-            <p>Recettes</p>
-            <p>Recettes</p>
-            <p>Recettes</p>
-            <p>Recettes</p>
-            <p>Recettes</p>
-        </div>
-    </header>
+		<form action="" method="" class="w-full col-span-4 row-start-2 lg:col-start-2 lg:col-end-3 lg:row-start-1 flex justify-center items-center p-3 border-b-main-red lg:border-0 border-b-8">
+			<input type="text" placeholder="Rechercher" class="border rounded-lg w-full h-full lg:h-3/4 mx-4 ps-4 focus:border-main-red">
+			</input>
+		</form>
+
+		<div class="hidden col-span-3 row-start-2 w-full mt-6 lg:flex lg:h-[50px] lg:justify-around lg:items-center bg-main-red">
+			<a class="text-xl text-white no-underline" href="{{ path('app_homepage') }}">Accueil</a>
+			<p class="text-xl text-white">Nos produits</p>
+			<p class="text-xl text-white">Nos nouvautés</p>
+			<p class="text-xl text-white">Recettes</p>
+			<a class="text-xl text-white" href="#">Blog</a>
+		</div>
+	</header>
 </div>
