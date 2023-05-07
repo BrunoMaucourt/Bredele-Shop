@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.footer-responsive-menu{
-    cursor: pointer;
+@layer base {
+    @font-face {
+        font-family: 'tangerine';
+        src: url("../../public/fonts/tangerine/Tangerine-Bold.ttf") format("truetype");
+    }
+}
+
+@layer utilities {    
+    .footer-responsive-menu{
+        cursor: pointer;
+    }
 }

@@ -6,6 +6,11 @@
 
 {% block additional_javascripts %}
 	<script defer src="{{ asset('/javascript/homepage_slider.js') }}"></script>
+	<script defer src="{{ asset('/javascript/homepage_random_quotes.js') }}"></script>
+{% endblock %}
+
+{% block additional_stylesheets %}
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 {% endblock %}
 
 {% block main %}
@@ -90,11 +95,11 @@
 			{% endif %}
 		</div>
 		<!--Sélection de livres-->
-	<!--Mes codes promos-->
+		<!--Mes codes promos-->
 		<!--Outil pratique-->
 	</section>
 
-	<section class="my-10 ms-8">
+	<section class="mt-10 ms-8">
 		<h2 class="text-4xl my-4 text-main-red">Bredele c'est</h2>
 		<div class="flex flex-col md:flex-row justify-around items-center">
 			<div class="flex flex-col justify-center items-center">
@@ -118,5 +123,10 @@
 				<p class="text-center text-slate-500">Données bancaires cryptées</p>
 			</div>
 		</div>
+	</section>
+
+	<section class="my-10 flex flex-col justify-center items-center">
+		<p id="quoteTranslation" class="font-tangerine text-7xl text-main-red-dark">Joyeux Noel</p>
+		<p id="quoteLanguage" class="text-xl text-slate-500">Français</p>
 	</section>
 {% endblock main %}

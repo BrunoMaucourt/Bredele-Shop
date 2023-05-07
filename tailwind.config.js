@@ -11,8 +11,14 @@ module.exports = {
         'main-red': '#d1001a',
         'main-gold': '#e8c567',
         'main-brown': '#aa8244',
-        'main-green': '#646e25',
+        'main-green': {
+          DEFAULT: '#646e25',
+          light: '#94d926',
+        },
       },
+      fontFamily: {
+        'tangerine': ['tangerine', 'sans-serif'],
+      }
     },
   },
   plugins: [],

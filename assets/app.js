@@ -13,7 +13,6 @@ import './styles/app.css';
 
 // Modify header position in function of scroll
 const header = document.getElementById("header");
-const header_space = document.getElementById("header_space");
 let lastKnownScrollPosition = 0;
 
 document.addEventListener("scroll", function () {
